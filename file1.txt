@@ -1,0 +1,49 @@
+this is file1
+
+1.创建版本库
+
+1.1 选择一个合适的地方，创建一个空目录：
+$ mkdir learngit
+$ cd learngit
+$ pwd
+D:\Program Files\Git\project\learngit
+
+1.2 把当前目录变成Git可以管理的仓库：
+$ git init
+Initialized empty Git repository in D:/Program Files/Git/project/learngit/.git/
+
+2.把文件添加到仓库
+
+2.1 用Visual Studio Code编写个readme.txt文件
+内容如下：
+“
+Git is a version control system.
+Git is free software.
+”
+
+2.2 文件放到learngit目录下（或其子目录）
+保证处于Git可以管理的仓库
+
+2.3 用命令git add告诉Git，把文件添加到仓库：
+$ git add readme.txt
+
+2.4 用命令git commit告诉Git，把文件提交到仓库：
+$ git commit -m "wrote a readme file"
+[master (root-commit) bddbac8] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 learngit/readme.txt
+
+#解释git commit命令：-m后面输入的是本次提交的说明
+#git commit命令执行成功后：
+#   1 file changed：1个文件被改动（我们新添加的readme.txt文件）
+#   2 insertions：插入了两行内容（readme.txt有两行内容）
+
+2.5 一次提交很多文件
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "添加 3 个文件，其中 file1.txt 为本次学习的笔记~"
+[master e8279f4] 添加 3 个文件，其中 file1.txt 为本次学习的笔记~
+ 3 files changed, 46 insertions(+)
+ create mode 100644 learngit/file1.txt
+ create mode 100644 learngit/file2.txt
+ create mode 100644 learngit/file3.txt
