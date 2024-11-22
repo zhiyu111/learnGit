@@ -1,0 +1,1 @@
+探索在feature-A中添加file4.txt，并合并到main时，main分支已被他人修改，此时合并对feature-A会有什么影响？
