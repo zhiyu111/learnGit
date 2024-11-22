@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 this is a test text written by ywqtttu.
+=======
+this is a test text written by ywqtttu.
+
+this is a test text written by zhiyu111.
+>>>>>>> feature-A
