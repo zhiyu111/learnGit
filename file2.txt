@@ -1,1 +1,21 @@
 this is file2
+
+1.创建分支
+
+1.1 git branch创建分支
+$ git branch feature-A
+  feature-A
+* master
+
+1.2 git checkout切换分支
+$ git checkout feature-A
+Switched to branch 'master'
+
+1.3 git branch——显示分支一览表
+
+1.4 git diff查看工作树和暂存区的状态区别
+在执行 git commit命令之前先执行git diff HEAD命令，
+查看本次提交与上次提交之间有什么差别，等确认完毕后再进行提交。
+这里的 HEAD 是指向当前分支中最新一次提交的指针。
+
+2.主干分支
