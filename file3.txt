@@ -1,1 +1,49 @@
 this is file3
+
+1.克隆合作者仓库
+$ git clone git@github.com:TwoTreesermu/git-tutorial.git
+$ cd git-tutorial
+
+2.git branch -a命令查看当前分支的相关信息
+$ git branch -a
+# -a 参数可以同时显示本地仓库和远程仓库的分支信息。
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature-D
+  remotes/origin/master
+
+3.获取远程的 feature-D 分支
+$ git checkout -b feature-D origin/feature-D
+#- b 参数的后面是本地仓库中新建分支的名称。
+
+4.向本地的 feature-D 分支提交更改
+#现在假定我们是另一名开发者，要做一个新的提交。在 README.md 文件中添加一行文字，查看更改。
+$ git diff
+diff --git a/README.md b/README.md
+index d48fd62..4304d77 100644
+--- a/README.md
++++ b/README.md
+@@ -6,3 +6,4 @@ hello, my name is ermu.
+  - fix B
+  - feature-C
+  - feature-D
++ - this is zhiyu111
+
+5.提交
+$ git commit -am "Add this is zhiyu111"
+
+6.推送 feature-D 分支
+$ git push
+
+从远程仓库获取 feature-D 分支，在本地仓库中提交更改，
+再将 feature-D 分支推送回远程仓库，通过这一系列操作，
+就可以与其他开发者相互合作，共同培育 feature-D 分支，实现某些功能。
+
+
+！！！注意：
+其他人已经推送了他们的更改到远程仓库，而你的本地分支还没有这些更改，会出现错误。
+因此需要
+（1）先拉取远程分支的更改：
+$  it pull origin main
+（2）再次推送：
+$  git push origin main
