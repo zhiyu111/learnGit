@@ -47,3 +47,6 @@ $ git commit -m "添加 3 个文件，其中 file1.txt 为本次学习的笔记~
  create mode 100644 learngit/file1.txt
  create mode 100644 learngit/file2.txt
  create mode 100644 learngit/file3.txt
+
+2.6 进行 push 更新 GitHub 上的仓库
+$ git push
